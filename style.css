@@ -140,10 +140,9 @@ mask-image: linear-gradient(to right, transparent 0%, black 25%, black 70%, tran
 .scroll-hint {
     margin-top: 10px; 
     margin-bottom: 15px; 
-    color: #d4af37;
+    color: #0000;
     font-size: 0.75rem;
     letter-spacing: 3px;
-    animation: bounce 2s infinite;
 }
 
 .scroll-hint .arrow {
