@@ -8,36 +8,29 @@
 </head>
 <body>
 
-    <!-- Clickable Envelope -->
     <div class="envelope-wrapper" id="envelope" onclick="openEnvelope()">
         
-        <!-- The Invitation Card -->
         <div class="letter">
             <h2>You're Invited</h2>
         </div>
         
-        <!-- Envelope Fold Shapes -->
         <div class="envelope-front-left"></div>
         <div class="envelope-front-right"></div>
         <div class="envelope-front-bottom"></div>
         
         <div class="flap">
-            <!-- New Wax Seal Image -->
             <img class="seal" src="wax.png" alt="M">
         </div>
     </div>
 
     <div class="instruction-text">Tap to Open</div>
 
-    <!-- Animation & Redirect Logic -->
     <script>
         function openEnvelope() {
             const envelope = document.getElementById('envelope');
             
-            // Add the 'open' class to trigger CSS animations
             envelope.classList.add('open');
             
-            // Wait 1.6 seconds for the animation to play out, then redirect
             setTimeout(() => {
                 window.location.href = 'invitation.html';
             }, 1600);

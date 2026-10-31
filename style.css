@@ -12,7 +12,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Parallax Hero Container */
 .hero-section {
     position: relative;
     width: 100%;
@@ -24,7 +23,6 @@ body {
     overflow: hidden;
 }
 
-/* Background Image with Fixed Parallax Effect */
 .hero-bg {
     position: absolute;
     top: 0;
@@ -39,14 +37,12 @@ body {
     z-index: 1;
 }
 
-/* Mobile Fix for background-attachment: fixed */
 @supports (-webkit-touch-callout: none) {
     .hero-bg {
         background-attachment: scroll;
     }
 }
 
-/* Vignette / Dark Gradient Overlay */
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -62,7 +58,6 @@ body {
     z-index: 2;
 }
 
-/* Text Overlay Styling */
 .hero-content {
     position: relative;
     z-index: 3;
@@ -108,7 +103,6 @@ body {
     margin-bottom: 25px;
 }
 
-/* Date Badge Block */
 .hero-date-badge {
     display: inline-flex;
     align-items: center;
@@ -130,7 +124,6 @@ body {
     padding: 0 15px;
 }
 
-/* Animated Scroll Hint */
 .scroll-hint {
     margin-top: 40px;
     color: #d4af37;
@@ -150,7 +143,6 @@ body {
     60% { transform: translateY(-4px); }
 }
 
-/* Main Content Wrapper */
 .main-content {
     position: relative;
     z-index: 4;
