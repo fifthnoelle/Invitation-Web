@@ -64,14 +64,22 @@
 
     <script>
         window.addEventListener('scroll', () => {
-            const nav = document.querySelector('.sticky-nav');
-            const scrollPos = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
-            
+        const scrollPos = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+
+        const heroBg = document.querySelector('.hero-bg');
+        if (heroBg) {
+            const scaleValue = 1 + (scrollPos / 1500);
+            heroBg.style.transform = `scale(${scaleValue})`;
+        }
+
+        const nav = document.querySelector('.sticky-nav');
+        if (nav) {
             if (scrollPos > 150) {
                 nav.classList.add('visible');
             } else {
                 nav.classList.remove('visible');
             }
+        }
         }, { passive: true });
     </script>
 
