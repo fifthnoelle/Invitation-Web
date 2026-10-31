@@ -23,18 +23,30 @@ body {
     overflow: hidden;
 }
 
-.hero-bg {
+.hero-bg-wrapper {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    z-index: 1; /* Keeps it behind .hero-overlay, assuming overlay is z-index: 2 */
+}
+
+.hero-bg {
+    width: 150%;
+    max-width: 480px; /* Limits the image to a mobile phone width */
+    height: 100%;
     background-image: url('pose.jpg');
-    background-position: center;
+    background-position: center 20%;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    z-index: 1;
+
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 50%, black 50%, transparent 100%);
+mask-image: linear-gradient(to right, transparent 0%, black 25%, black 70%, transparent 100%);
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -92,7 +104,7 @@ body {
     letter-spacing: 2px;
     color: #f0e6d2;
     line-height: 1.6;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .script-name {
@@ -100,7 +112,7 @@ body {
     font-size: 4rem;
     color: #ffffff;
     text-shadow: 0 2px 15px rgba(212, 175, 55, 0.6);
-    margin-bottom: 25px;
+    margin-bottom: 0cm;
 }
 
 .hero-date-badge {
@@ -125,7 +137,7 @@ body {
 }
 
 .scroll-hint {
-    margin-top: 40px;
+    margin-top: 15px;
     color: #d4af37;
     font-size: 0.75rem;
     letter-spacing: 3px;
@@ -204,4 +216,46 @@ p {
 
 .calendar-btn:hover {
     background-color: #687893;
+}
+
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 20px 35px 20px; 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+.sticky-nav.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.2rem;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(212, 175, 55, 0.6);
+    line-height: 1;
+}
+
+.nav-title {
+    font-family: Georgia, serif;
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    color: #d4af37;
+    text-transform: uppercase;
 }
