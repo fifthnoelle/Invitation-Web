@@ -65,13 +65,14 @@
     <script>
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('.sticky-nav');
-            // Adjust 150 to change how far down they scroll before it appears
-            if (window.scrollY > 150) {
+            const scrollPos = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollPos > 150) {
                 nav.classList.add('visible');
             } else {
                 nav.classList.remove('visible');
             }
-        });
+        }, { passive: true });
     </script>
 
 </body>
