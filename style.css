@@ -80,7 +80,7 @@ mask-image: linear-gradient(to right, transparent 0%, black 25%, black 70%, tran
     flex-direction: column;
     align-items: center;
     padding: 0;
-    transform: translateY(15px); 
+    transform: translateY(10px); 
 }
 
 .script-title {
@@ -139,7 +139,7 @@ mask-image: linear-gradient(to right, transparent 0%, black 25%, black 70%, tran
 
 .scroll-hint {
     margin-top: 10px; 
-    margin-bottom: 5px; 
+    margin-bottom: 15px; 
     color: #d4af37;
     font-size: 0.75rem;
     letter-spacing: 3px;
