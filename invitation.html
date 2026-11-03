@@ -24,7 +24,7 @@
             <span class="script-title">Birthday</span>
             <h1 class="gold-title">DINNER</h1>
             <p class="hero-subtitle">KINDLY JOIN US FOR A 50TH<br>BIRTHDAY PARTY HONORING</p>
-            <h2 class="script-name">Marieta</h2>
+            <span class="script-name">Marieta</span>
             
             <div class="hero-date-badge">
                 <span>DEC</span>
@@ -39,27 +39,64 @@
     </section> 
 
     <main class="main-content">
-        <div class="invitation-container">
-            <h1>You're Invited!</h1>
-            <h2>Join us in celebrating Marieta's 50th Birthday</h2>
-            
-            <p><strong>When:</strong> Sunday, December 20th at 5:30PM</p>
-            <p><strong>Where:</strong> Blue Gardens Wedding and Events Venue 28 Samonte Street via North Zuzuaregui Road, Commonwealth Ave, Quezon City, 1119 Metro Manila</p>
-
+        <section class="content-section">
+            <span class="content-heading">When</span>
+            <p>Sunday, December 20th<br>at 5:30 PM</p>
             <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Marieta's+50th+Birthday&dates=20261220T093000Z/20261220T143000Z&details=Join+us+in+celebrating+Marieta's+50th+Birthday!&location=Blue+Gardens+Wedding+and+Events+Venue,+28+Samonte+Street,+Quezon+City" target="_blank" class="calendar-btn">
                 Add to Google Calendar
             </a>
+        </section>
+
+        <div class="intermission-single">
+            <img src="pose.jpg" alt="Marieta">
+        </div>
+
+        <section class="content-section">
+            <span class="content-heading">Where</span>
+            <p><strong>Blue Gardens Wedding and Events Venue</strong><br>28 Samonte Street via North Zuzuaregui Road,<br>Commonwealth Ave, Quezon City</p>
+            <div class="embed-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.6525495400006!2d121.07692460000001!3d14.675648899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b755c9741e83%3A0x394d8d6a9c811c6e!2sBlue%20Gardens%20Wedding%20and%20Events%20Venue!5e0!3m2!1sen!2sph!4v1792749776735!5m2!1sen!2sph" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </section>
+
+        <div class="intermission-gallery">
+            <img src="pose.jpg" alt="Gallery Image 1">
+            <img src="pose.jpg" alt="Gallery Image 2">
+        </div>
+
+        <section class="content-section">
+            <span class="content-heading">Dress Code</span>
+            <p>Formal attire in shades of Gold, Black, or Nude.</p>
             
-            <p style="margin-top: 25px;">Please let us know if you can make it by filling out the RSVP form below.</p>
+            <div class="attire-guide">
+                <div class="attire-box">
+                    <img src="men-attire.jpg" alt="Men's Attire Inspiration">
+                    <span>Gentlemen</span>
+                </div>
+                <div class="attire-box">
+                    <img src="women-attire.jpg" alt="Women's Attire Inspiration">
+                    <span>Ladies</span>
+                </div>
+            </div>
+
+            <div class="letter-request">
+                <h3 class="content-heading">A Special Request</h3>
+                <p>We kindly ask each guest to bring a handwritten letter or card for Marieta to read and cherish as she celebrates this milestone.</p>
+            </div>
+        </section>
+
+        <div class="intermission-single small">
+            <img src="pose.jpg" alt="Marieta">
         </div>
 
-        <div class="embed-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.6525495400006!2d121.07692460000001!3d14.675648899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b755c9741e83%3A0x394d8d6a9c811c6e!2sBlue%20Gardens%20Wedding%20and%20Events%20Venue!5e0!3m2!1sen!2sph!4v1792749776735!5m2!1sen!2sph" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        </div>
-
-        <div class="embed-container">
-           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeVoZjYSaJI6kJXvKvB5aPWYz0aKWJUjvun82M0I4zRN3QyFA/viewform?embedded=true" width="640" height="1010" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </div>
+        <section class="content-section rsvp-section">
+            <img src="logo.png" alt="Birthday Logo" class="rsvp-logo">
+            <h2>RSVP</h2>
+            <p>Please let us know if you can make it by filling out the form below.</p>
+            <div class="embed-container form-container">
+               <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScYEzwaiXjKm_XusPFMFKHVZNzl14Qc8IQHs6FGBVoBxLh_rw/viewform?embedded=true" width="640" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </section>
     </main>
 
     <script>
@@ -74,7 +111,7 @@
 
         const nav = document.querySelector('.sticky-nav');
         if (nav) {
-            if (scrollPos > 150) {
+            if (scrollPos > 600) {
                 nav.classList.add('visible');
             } else {
                 nav.classList.remove('visible');
