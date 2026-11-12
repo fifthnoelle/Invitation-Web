@@ -343,13 +343,8 @@ p {
     margin-bottom: 10px;
 }
 
-.intermission-single img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 8px;
-    margin: 0 auto 40px auto;
-    display: block;
+.intermission-single{
+    overflow: hidden;
     box-shadow: 0 5px 25px rgba(0,0,0,0.5);
 
     -webkit-mask-image: 
@@ -361,6 +356,16 @@ p {
         linear-gradient(to bottom, transparent 0%, black 20%, black 50%, transparent 100%),
         linear-gradient(to right, transparent 0%, black 40%, black 50%, transparent 100%);
     mask-composite: intersect;
+}
+
+.intermission-single img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto 40px auto;
+    display: block;
+    transform: scale(1.2);
 }
 
 .intermission-single.small img {
@@ -377,6 +382,7 @@ p {
 .intermission-gallery img {
     width: 70%;
     max-width: 380px;
+    min-width: 380px;
     height: auto;
     border-radius: 8px;
     object-fit: cover;
@@ -393,42 +399,27 @@ p {
 
 /* Shifts the left image upward */
 .intermission-gallery img:nth-child(1) {
-    transform: translateY(-60px);
+    transform: translateY(-90px);
     z-index: 2;
 }
 
 /* Shifts the right image downward */
 .intermission-gallery img:nth-child(2) {
     transform: translateY(70px);
-    margin-left: -30%;
+    margin-left: -228px;
     z-index: 1;
 }
 
 .attire-guide {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
     margin: 25px 0;
     width: 100%;
-    
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    
-    padding: 0 calc(50% - 60px); 
-
-    -ms-overflow-style: none;  
-    scrollbar-width: none;
-}
-
-.attire-guide::-webkit-scrollbar {
-    display: none;
 }
 
 .attire-box {
-    flex: 0 0 auto; 
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -448,6 +439,30 @@ p {
     font-size: 0.9rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+    .attire-guide {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 20px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        padding: 0 calc(50% - 60px);
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .attire-guide::-webkit-scrollbar {
+        display: none;
+    }
+
+    .attire-box {
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+    }
 }
 
 .letter-request {
