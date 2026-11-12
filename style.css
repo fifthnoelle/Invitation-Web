@@ -92,12 +92,12 @@ body {
     position: absolute;
     top: 0%;
     width: 100%;
-    max-width: 550px; /* Slightly wider than the 390px hero-bg to bleed out gracefully */
+    max-width: 550px;
     height: 100%;
     z-index: 2;
     pointer-events: none;
 
-    /* Soft gold radial backlight */
+
     background: radial-gradient(
         ellipse at center 40%,
         rgba(205, 169, 50, 0.35) 50%,
@@ -106,7 +106,6 @@ body {
         transparent 75%
     );
 
-    /* Feathered mask to blend into the dark theme */
     -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
     
@@ -119,16 +118,15 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 3; /* Sits directly above hero-bg-wrapper (z-index: 1) and below hero-overlay (z-index: 3) */
+    z-index: 3; 
     pointer-events: none;
 
     background-image: url('dust.png'); 
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 100%; /* Adjust opacity as needed */
+    opacity: 100%;
 
-    /* Feathers top and bottom so dust particles fade softly into the section edges */
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
     mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
 }
@@ -353,6 +351,16 @@ p {
     margin: 0 auto 40px auto;
     display: block;
     box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+
+    -webkit-mask-image: 
+        linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%),
+        linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    
+    mask-image: 
+        linear-gradient(to bottom, transparent 0%, black 20%, black 50%, transparent 100%),
+        linear-gradient(to right, transparent 0%, black 40%, black 50%, transparent 100%);
+    mask-composite: intersect;
 }
 
 .intermission-single.small img {
