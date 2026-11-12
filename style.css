@@ -436,8 +436,8 @@ p {
 }
 
 .attire-box img {
-    width: 120px;
-    height: 160px;
+    width: 90px;
+    height: 130px;
     object-fit: cover;
     border-radius: 4px;
     border: 1px solid #d4af37;
@@ -514,6 +514,14 @@ p {
 .sticky-nav.visible {
     top: 0; 
     opacity: 1;
+}
+
+.nav-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    max-width: 1000px;
 }
 
 .nav-name {
