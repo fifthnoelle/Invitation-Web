@@ -537,6 +537,7 @@ p {
     font-size: 1rem;
     font-weight:bolder;
     letter-spacing: 2px;
+    text-align: left;
     color: #d4af37;
     text-transform: uppercase;
 }
