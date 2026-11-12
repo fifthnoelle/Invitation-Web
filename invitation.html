@@ -74,16 +74,8 @@
             <span class="content-heading">Dress Code</span>
             <p>Smart casual attire in shades of Gray, Black, or Beige.</p>
             
-            <div class="attire-guide">
-                <div class="attire-box">
-                    <img src="men-attire.webp" alt="Men's Attire Inspiration">
-                    <span>Gentlemen</span>
-                </div>
-                <div class="attire-box">
-                    <img src="women-attire.webp" alt="Women's Attire Inspiration">
-                    <span>Ladies</span>
-                </div>
-            </div>
+                <div class="attire-guide" id="attire-gallery-1"></div>
+                <div class="attire-guide" id="attire-gallery-2"></div>
 
             <div class="letter-request">
                 <h3 class="content-heading">A Special Request</h3>
@@ -127,6 +119,34 @@
             }
         }
         }, { passive: true });
+    </script>
+
+    <script>
+        const attireImages = [
+        "men-attire.webp",
+        "women-attire.webp",
+        "men-attire.webp",
+        "women-attire.webp",
+        "men-attire.webp",
+        "women-attire.webp"
+    ];
+
+    // 2. Create the reusable function
+    function populateAttire(containerId, images) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+
+        // Loop through the array and build the HTML string
+        container.innerHTML = images.map(imgSrc => `
+            <div class="attire-box">
+                <img src="${imgSrc}" alt="Attire Inspiration">
+            </div>
+        `).join('');
+    }
+
+    // 3. Call the function for your containers
+    populateAttire('attire-gallery-1', attireImages);
+    populateAttire('attire-gallery-2', attireImages);
     </script>
 
 </body>

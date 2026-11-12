@@ -393,14 +393,14 @@ p {
 
 /* Shifts the left image upward */
 .intermission-gallery img:nth-child(1) {
-    transform: translateY(-30px);
+    transform: translateY(-60px);
     z-index: 2;
 }
 
 /* Shifts the right image downward */
 .intermission-gallery img:nth-child(2) {
-    transform: translateY(30px);
-    margin-left: -25%;
+    transform: translateY(70px);
+    margin-left: -30%;
     z-index: 1;
 }
 
@@ -408,11 +408,27 @@ p {
     display: flex;
     gap: 20px;
     margin: 25px 0;
-    justify-content: center;
     width: 100%;
+    
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    
+    padding: 0 calc(50% - 60px); 
+
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+}
+
+.attire-guide::-webkit-scrollbar {
+    display: none;
 }
 
 .attire-box {
+    flex: 0 0 auto; 
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
