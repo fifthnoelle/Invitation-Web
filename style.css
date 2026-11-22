@@ -285,6 +285,25 @@ p {
     background-color: #687893;
 }
 
+.calendar-update-alert {
+    width: 100%;
+    max-width: 520px;
+    margin: 18px auto 0;
+    padding: 14px 18px;
+    color: #f5edcf;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid #d4af37;
+    border-radius: 6px;
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.16);
+    font-family: 'Sackers Gothic', normal;
+    font-size: 0.80rem;
+    line-height: 1.5;
+}
+
+.calendar-update-alert strong {
+    color: #e5c158;
+}
+
 .content-section {
     font-family: 'Sackers Gothic', normal;
     max-width: 700px; 
